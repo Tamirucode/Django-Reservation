@@ -1,0 +1,255 @@
+
+
+/* Root CSS */
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+   background-color: olivedrab;
+    text-align: center;
+    font-family: sans-serif;
+    line-height: 1.25;
+    height: 100vh;
+}
+
+/* Main Divs */
+.content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width:100%;
+} 
+
+
+
+.table{
+    flex:0.5;
+    margin: 2rem;
+    display:flex;
+    text-align: left;
+    align-items: start;  
+    flex-direction: column;
+}
+
+/* Sub Divs */
+
+.home{
+    flex: 0.2;
+}
+.table-info{
+    flex: 0.4;
+    margin: 1rem 1rem;
+    
+}
+
+form{
+    display: flex;
+    flex: 0.4 1 auto;
+    flex-direction: column;
+    background-color: #fff;
+    
+}
+
+/* Inside Sub Divs */
+
+.image img{
+    flex:1;
+    max-height: 99.2vh;
+    
+}
+
+i{
+    color:black
+    font-size: 4rem;
+}
+
+/* Form's CSS */
+
+.input-div{
+    flex: 1 1 auto;
+    margin:1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+input, button{
+    flex:1;
+    width:300px;
+    border-radius: 0.5rem;
+    line-height: 1.5;
+    font-size: 1.5rem;
+    color:black;
+
+}
+img {
+    max-width: 100%;
+  }
+  
+  .container {
+    display: flex;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 3rem;
+    margin-top: 3rem;
+    color: var(--primary-text-color);
+  }
+/* table */
+
+#table {
+    background: #f9f9f9;
+    border-radius: 11px;
+    /* margin: 1rem; */
+    display: grid;
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    text-align: center;
+    /* padding: 2rem; */
+    max-width: 100vw;
+  }
+  
+  /* table Divs */
+  .table{
+    width: 355px;
+    
+    min-width: 300px;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 0.5rem;
+    flex: 1;
+  }
+  
+  .table:hover {
+    background-color: #d4d4d4;
+  }
+  
+  /* Inside Table Divs */
+  .table h2 {
+    font-size: 30px;
+    margin: 0.25rem;
+  }
+  .table p {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  a {
+    text-decoration: blue;
+    color: var(--secondary-text-color);
+  }
+  button{
+    background-color: #dfdfdf;
+    color:rgb(6, 137, 245);
+    outline:none;
+}
+
+button:hover{
+    color:#dfdfdf;
+    background-color: rgb(6, 137, 245);
+}
+/*media querie*/
+  
+ @media only screen and (min-width: 768px) {
+    #table {
+      grid-template-columns: 1fr 1fr;
+    }
+    
+  }
+  @media only screen and (min-width: 1300px) {
+    #table {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+   
+  }
+  @media only screen and (min-width: 1800px) {
+    #table {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+   
+  }
+  
+  /*css booking_list*/
+  #content{
+    display: flex;
+    flex-direction: column;
+    
+    width:100%;
+    
+}
+
+
+  .header{
+    flex: 1;
+    display: flex;
+    flex-flow: row-reverse wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.headings{
+    flex:1.5;
+}
+.home{
+    flex:0.1;
+    
+}
+
+.bookings{
+    margin-top: 2rem;
+    flex:1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.booking{
+    flex:1;
+    max-width:20vw;
+    min-width: 20rem;
+    text-align: left;
+    border: 1px solid #dbdbdb;
+    padding:1rem;
+    border-radius: 0.75rem;
+    margin:1rem;
+}
+.booking:hover{
+    cursor: pointer;
+
+}
+img{
+    max-width: 100%;
+}
+a i{
+    margin: 1rem;
+    color:rgb(236, 235, 228);
+    text-decoration: none;
+}
+.home a i{
+    font-size: 1.7rem;
+
+}
+
+h1,h2{
+    margin:1rem;
+}
+.booking a i{
+    font-size: 1.1rem;
+    visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.booking:hover .cancel a i,.cancel a i:hover{
+    visibility: visible;
+  opacity: 1;
+}
+.cancel a i:hover{
+    color: rgb(206, 43, 43);
+    
+}

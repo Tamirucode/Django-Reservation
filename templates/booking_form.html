@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+
+    
+      <div class="nav">
+        <h3 id="logo">Tamiru Restaurant</h3>
+        <!-- <ul class="navlist">
+          <a href="/marina_beach_amenties.html">Amenties</a>
+        </ul> -->
+      </div>
+    
+    <div class="d-flex flex-column align-items-center justify-content-center check_availability"
+    >
+    
+      <div class="headings m-4">
+        <h1>Tamiru Bar and </h1>
+        <h1>Restaurant </h1>
+      </div>
+
+      
+      <form id="booking-form" action="" method="POST">
+
+        {% csrf_token %}
+
+        <!-- Input Div -->
+        <div class="input-div">
+            <label for="id_date">Date : </label>
+            <input type="date" id="id_date"  required  name="date">
+        </div>
+
+        <!-- Input Div -->
+        <div class="input-div">
+            <label for="id_time">Time : </label>
+            <input type="time" id="id_time" required name="time">
+        </div>
+
+        <!-- Input Div -->
+        <div class="input-div">
+            <button type="submit">Book a Table</button>
+        </div>
+
+    </form>
+        
+
+        
+      
+    
+   
+
+  {% endblock %}

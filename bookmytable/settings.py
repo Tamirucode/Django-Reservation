@@ -31,7 +31,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['tablereservation2023-ee6a80ce91cb.herokuapp.com', 'localhost']
+#ALLOWED_HOSTS = ["tablereservation2023-ee6a80ce91cb.herokuapp.com", "localhost"]
+ALLOWED_HOSTS = ['8000-tamirucode-djangoreserv-dqu74gxp81p.ws-eu101.gitpod.io']
 
 
 
@@ -48,6 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'reservation',
+    'reservation.availabilities',
 ]
 
 MIDDLEWARE = [

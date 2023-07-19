@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="content">
+ <!-- Table Image -->
+ <div class="image">
+    <img
+src="https://res.cloudinary.com/dqh6bfpwq/image/upload/v1688938872/gallery-3_zjmtlt.jpg">
+</div>
+
+
+    <!-- table Details --> 
+<div class="table">
+
+    <!-- Div 1: Back to Home -->
+    <div class="home">
+        <a href="{% url 'reservation:TableListView' %}"><i class="fas fa-arrow-alt-circle-left">home</i></a>
+    </div>
+
+    <!-- Div 2: tableInformation -->
+    <div class="table-info">
+        <h1>{{table_category}}</h1>
+        
+    </div>
+    <form id="booking-form" action="" method="POST">
+
+        {% csrf_token %}
+
+        <!-- Input Div -->
+        <div class="input-div">
+            <label for="id_date">Date : </label>
+            <input type="date" id="id_date"  required  name="date">
+        </div>
+
+        <!-- Input Div -->
+        <div class="input-div">
+            <label for="id_time">Time : </label>
+            <input type="time" id="id_time" required name="time">
+        </div>
+
+        <!-- Input Div -->
+        <div class="input-div">
+            <button type="submit">Book a Table</button>
+        </div>
+
+    </form>
+ 
+    
+    
+</div> <!-- END table Div -->
+
+</div><!-- END content Div -->
+
+{% endblock %}

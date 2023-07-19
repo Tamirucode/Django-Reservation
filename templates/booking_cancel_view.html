@@ -1,0 +1,49 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+
+
+
+
+ <!-- Main Content -->
+ <div class="content">
+
+    <!-- table Image -->
+    <div class="image">
+        <img
+            src="https://res.cloudinary.com/dqh6bfpwq/image/upload/v1688938872/gallery-3_zjmtlt.jpg">
+    </div>
+
+    <!-- Table Details -->
+    <div class="table">
+
+        
+        
+        <!-- Div 2: Table Information -->
+        <!--<div class="table-info">
+            <h1>{{table_category}}</h1>
+            
+        </div>-->
+
+        <!-- Div 3: Table canceling Form -->
+        <form id="cancelling-form" action="" method="POST">
+
+            {% csrf_token %}
+            <h2>Are you sure you want to cancel this Booking? Details-</h2>
+            
+            <h3>{{booking.date}}</h3>
+
+            <!-- Input Div -->
+            <h3>{{booking.time.}}</h3>
+            <div class="input-div">
+                <button type="submit">Cancel the Booking</button>
+            </div>
+
+        </form>
+
+    </div> <!-- END Table Div -->
+
+</div> <!-- END Main Content Div -->
+{% endblock %}

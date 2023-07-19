@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="content">
+    <div class="header">
+        <div class="headings">
+            <h1>Your Bookings</h1>
+            <h2>Welcome dear {{user}}</h2>
+        </div>
+        <div class="home">
+            <!-- Div 1: Back to Home -->
+            <div class="home">
+                <a href="{% url 'reservation:TableListView' %}"><i class="fas fa-arrow-alt-circle-left">Home</i></a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="bookings">
+        {% for booking in booking_list %}
+        <div class="booking">
+            
+            <img
+                src=" https://res.cloudinary.com/dqh6bfpwq/image/upload/v1688938872/gallery-3_zjmtlt.jpg">
+            
+            <div class="category">
+                <h2>{{booking.get_table_category}}</h2>
+            </div>
+            <div class="date">
+                <h3>Date: {{booking.date}}</h3>
+            </div>
+            <div class="time">
+                <h3>Time: {{booking.time}}</h3>
+            </div>
+            <div class="cancel"><a href="{{booking.get_cancel_booking_url}}" class="invisible"><i
+                        class="far fa-2x fa-times-circle"> Cancel
+                        Booking</i></a>
+            </div>
+
+                {% empty %}
+            <h2>You have no upcoming booking</h2>
+        </div>
+        {% endfor %}
+    </div>
+        
+    
+
+</div>
+{% endblock  %}

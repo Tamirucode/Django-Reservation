@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Tables</h2>
+<!-- Main Content -->
+<div class="content">
+  <!-- table1 -->
+  <div id="table">
+  {% for table_category, table_url in table_list %}
+  <div class="table">
+    
+    <a href="{{table_url}}">
+    <img
+      src="https://res.cloudinary.com/dqh6bfpwq/image/upload/v1688938776/gallery-1_mft04e.jpg"
+    />
+    <h2>{{table_category}}<h2>
+    <p>
+    
+    </p>
+    </a>
+  </div>
+  
+  {% endfor %}
+</div>
+</div>
+<!-- endtable1 -->
+
+
+<!-- endtable1 -->
+
+
+ 
+
+{% endblock  %}
